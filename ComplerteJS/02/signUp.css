@@ -1,0 +1,26 @@
+*{ box-sizing: border-box;}
+html,body {margin:0;padding:0;}
+.container {
+    margin: 10px,50px;
+}
+.form-group{
+    margin: 10px;
+}
+input{
+    width: 100%;
+    border: solid 1px #eee;
+    padding: 15px 10px;
+}
+button {
+    width: 50px;
+    border: solid 1x dodgerblue;
+    transition: all .38s ease-in-out;
+}
+button:hover {
+    background: dodgerblue;
+    color: floralwhite;
+}
+/* table td {
+    border: solid 1px #eee;
+    padding: 10px;
+} */
