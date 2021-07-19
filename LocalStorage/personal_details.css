@@ -1,0 +1,13 @@
+.hidden {
+    display: none;
+}
+
+.danger{
+    border: 1px solid red;
+  border-radius: 1px;
+}
+
+.safe{
+    border: 1px solid lightgreen;
+  border-radius: 1px;
+}

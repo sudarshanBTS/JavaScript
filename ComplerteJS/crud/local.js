@@ -59,13 +59,17 @@ function clearStorage() {
 
 // function editButton(td) {
 // }
-function editButton(td) {
-  var key = document.getElementById("retrieveKey").value; //gets key from user
-  console.log("retrive records");
-  var records = localStorage.getItem(key); //searches for the key in localStorage
-  var parsed = JSON.parse(records);
+  // var key = document.getElementById("retrieveKey").value; //gets key from user
+  // console.log("retrive records");
+  // var records = localStorage.getItem(key); //searches for the key in localStorage
+  // var parsed = JSON.parse(records);
 
-  selectedRow = td.parentElement.parentElement;
-  document.getElementById("carBrand").value = selectedRow.cells[0].innerHTML;
-  document.getElementById("carPrice").value = selectedRow.cells[1].innerHTML;
-}
+  // selectedRow = td.parentElement.parentElement;
+  // document.getElementById("carBrand").value = selectedRow.cells[0].innerHTML;
+  // document.getElementById("carPrice").value = selectedRow.cells[1].innerHTML;
+
+  edit_button.addEventListener("click", function() {
+    paragraph.contentEditable = true;
+    paragraph.style.backgroundColor = "#dddbdb";
+  } );
+
