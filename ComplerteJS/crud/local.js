@@ -8,12 +8,12 @@ window.onload = function () {
 };
 function store() {
   var brand = document.getElementById("carBrand").value;
-  var price = document.getElementById("carPrice").value;
+  var email = document.getElementById("carPrice").value;
   var key = document.getElementById("key").value;
 
   const car = {
     brand: brand,
-    price: price,
+    email: email,
   };
 
   window.localStorage.setItem(key, JSON.stringify(car));
@@ -41,11 +41,11 @@ function retrieveRecords() {
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = arr[index].brand;
     cell2 = newRow.insertCell(1);
-    cell2.innerHTML = arr[index].price;
+    cell2.innerHTML = arr[index].email;
   }
 }
 function removeItem() {
-  //deletes item from localStorage
+  //deletes Emp from localStorage
   var key = document.getElementById("removeKey").value; //gets key from user
   localStorage.removeItem(key); //passes key to the removeItem method
   console.log("remove items");

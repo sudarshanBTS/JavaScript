@@ -257,7 +257,7 @@ var enableSubmitBtn = function()
         document.querySelector('.submit').removeAttribute('disabled');
 
         document.getElementById('name').classList.remove('danger');
-        document.getElementById('name').classList.remove('safe');
+        document.getElementById('name'              ).classList.remove('safe');
         document.getElementById('lastname').classList.remove('danger');
         document.getElementById('lastname').classList.remove('safe');
         document.getElementById('contact').classList.remove('danger');

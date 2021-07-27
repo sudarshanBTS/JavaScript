@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="crud1.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-wrapper">
+            <form action="javascript:;" class="form">
+                ID : <input type="number" name="id" id="id"/><br>
+                NAME : <input type="text" name="name" id="name"/><br>
+                EMail : <input type="email" name="email" id="email"/><br>
+                NUMBER : <input type="number" name="number" id="number"/><br>
+            </form>
+            <div class="button">
+                <button onclick="createItem()">createItem</button>
+                <button onclick="readItem()">readItem</button>
+                <button onclick="updateItem()">updateItem</button>
+                <button onclick="deleteItem()">deleteItem</button>
+            </div>
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
