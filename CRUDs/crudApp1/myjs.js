@@ -90,11 +90,45 @@ function List(tblData) {
     for (var i in tblData) {
         var cli = JSON.parse(tblData[i]);
         $("#tableList tbody").append("<tr>");
-        $("#tableList tbody").append("<td><img src='g' alt='" + "edit" + "'class='btnEdit'/><img src='localStorage/delete. png' alt='" + "delete" + "' class='btnDelete'/></td>");
+
+
+        $("#tableList tbody").append("<td><img src='https://img.icons8.com/dotty/12/000000/edit.png' alt='" + i+"'class='btnEdit'/><span><img src='https://img.icons8.com/fluent/12/000000/delete-sign.png' alt='" + i+"' class='btnDelete'/></td>");
+    
         $("#tableList tbody").append("<td>" + cli.id + "</td>");
         $("#tableList tbody").append("<td>" + cli.name + "</td>");
         $("#tableList tbody").append("<td>" + cli.number + "</td>");
         $("#tableList tbody").append("<td>" + cli.Email + "</td>");
         $("#tableList tbody").append("</tr>");
     }
+}
+
+
+// const apiEndpoint = "https://localhost:5000/api/users"
+async function fetchData() {
+    const apiEndpoint = "https://reqres.in/api/users=2";
+    fetch(apiEndpoint)
+        .then((response) => {
+            response.json().
+                then((posts) => console.log(posts));
+        });
+
+
+    
+    // var tblData = localStorage.getItem("tblData"); //
+    // fetch('https://reqres.in/api/users', {
+        //     method:'POST',
+        //     headers : {
+            //         'Content-Type' : 'application/json',
+            //     },
+            //     body : JSON.stringify(posts),
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+                //     console.log('success :',posts);
+                // })
+                // .catch((error) => {
+                    //     console.error(error);
+                    // });
+            
+    
 }
