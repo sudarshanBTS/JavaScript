@@ -90,7 +90,7 @@ function List(tblData) {
     for (var i in tblData) {
         var cli = JSON.parse(tblData[i]);
         $("#tableList tbody").append("<tr>");
-        $("#tableList tbody").append("<td><img src='localStorage/edit.png' alt='" + i + "'class='btnEdit'/><img src='localStorage/delete. png' alt='" + i + "' class='btnDelete'/></td>");
+        $("#tableList tbody").append("<td><img src='g' alt='" + "edit" + "'class='btnEdit'/><img src='localStorage/delete. png' alt='" + "delete" + "' class='btnDelete'/></td>");
         $("#tableList tbody").append("<td>" + cli.id + "</td>");
         $("#tableList tbody").append("<td>" + cli.name + "</td>");
         $("#tableList tbody").append("<td>" + cli.number + "</td>");
