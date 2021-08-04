@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="myapp.css">
+    <script src="myapp.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form id="frmRegistration">
+        <section>
+          <h2>CRUD Form localStorage</h2>
+          <fieldset>
+            <legend>Data form:</legend>
+            <ul>
+              <li>
+                <label for="txtId">
+                  <span>Id:</span>
+                  <input type="text" id="txtId" />
+                </label>
+              </li>
+              <li>
+                <label for="txtName">
+                  <span>Name:</span>
+                  <input type="text" id="txtName" />
+                </label>
+              </li>
+              <li>
+                <label for="txtPhone">
+                  <span>Phone:</span>
+                  <input type="text" id="txtPhone" />
+                </label>
+              </li>
+              <li>
+                <label for="txtEmail">
+                  <span>Email:</span>
+                  <input type="text" id="txtEmail" />
+                </label>
+              </li>
+              <li>
+                <input type="submit" value="Save" id="btnSave" />
+              </li>
+            </ul>
+          </fieldset>
+        </section>
+      </form>
+      <hr />
+      <table id="tblList"></table>
+      
+</body>
+</html>
