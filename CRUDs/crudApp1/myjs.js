@@ -87,6 +87,8 @@ function List(tblData) {
         "<tbody>" +
         "</tbody>"
     );
+
+    
     for (var i in tblData) {
         var cli = JSON.parse(tblData[i]);
         $("#tableList tbody").append("<tr>");
