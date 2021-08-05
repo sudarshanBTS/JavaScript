@@ -6,37 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/7acdbe3b7b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar -->
-    <!-- <nav class="navbar">
+    <!-- navbar-section  -->
+    <nav class="navbar">
         <div class="navbar_container">
-            <a href="#home" id="navbar_logo">COLOR</a>
+            <a href="/" id="navbar_logo"> <i class="fas fa-gem"></i> NEXT</a>
             <div class="navbar_toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span>    
+                <span class="bar"></span>    
+                <span class="bar"></span>    
             </div>
             <ul class="navbar_menu">
                 <li class="navbar_item">
-                    <a href="" class="navbar_link" id="home-page"></a>
+                    <a href="" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/tech.html" class="navbar_links">Tech</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links">Products</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="/" class="button">Sign UP</a>
                 </li>
             </ul>
         </div>
-    </nav> -->
+    </nav>
+<!-- hero-section  -->
+<div class="main">
+    <div class="main-container">
+    <div class="main_content">
 
-    <div class="container">
-        <div>
-            NUM 1 : <input type="text" name="num1" id="numF">
-        </div>
-<div>
-    NUM 2 : <input type="text" name="num2" id="numS">
-</div> <br>
-<button onclick="multiply()">multiply</button>
-<button onclick="divide()">Divide</button>
+        <h1>NEXT GENERATION</h1>
+        <h2>TECHNOLOGY</h2>
+        <p>See what makes us different</p>
+        <button class="main_button"><a href="/">Get Started</a></button>
     </div>
-<p>The result is : <span id = "result"> </span></p>
-
+    <div class="main_img-container">
+        <img src="images/pic1.svg" alt="main_img" id="main_img">
+    </div>
+</div>
+    
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
