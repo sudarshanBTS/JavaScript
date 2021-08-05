@@ -85,16 +85,20 @@ function List(tblData) {
         "<tbody>" +
         "</tbody>"
     );
+    // https://img.icons8.com/dotty/12/000000/edit.png
     for (var i in tblData) {
         var cli = JSON.parse(tblData[i]);
         $("#tableList tbody").append("<tr>");
         $("#tableList tbody").append(
-            "<td><img src='https://img.icons8.com/dotty/12/000000/edit.png' alt='" +
+            // "<td> <div class='btnEdit'><i class='far fa-edit btnEdit'></i></div> </td>"
+            "<td>        <img src='https://img.icons8.com/dotty/12/000000/edit.png' alt='" +
             i +
             "'class='btnEdit'/><img src='https://img.icons8.com/fluent/12/000000/delete-sign.png' alt='" +
             i +
             "' class='btnDelete'/></td>"
         );
+
+
         // $("#tableList tbody").append("<td><img src='g' alt='" + "edit" + "'class='btnEdit'/><img src='localStorage/delete. png' alt='" + "delete" + "' class='btnDelete'/></td>");
         $("#tableList tbody").append("<td>" + cli.id + "</td>");
         $("#tableList tbody").append("<td>" + cli.name + "</td>");
