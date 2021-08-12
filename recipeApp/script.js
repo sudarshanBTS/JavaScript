@@ -49,12 +49,11 @@ function addMeal(mealData, random = false) {
 
     meal.innerHTML = `
         <div class="meal-header">
-            ${
-                random
-                    ? `
+            ${random
+            ? `
             <span class="random"> Random Recipe </span>`
-                    : ""
-            }
+            : ""
+        }
             <img
                 src="${mealData.strMealThumb}"
                 alt="${mealData.strMeal}"
@@ -83,7 +82,7 @@ function addMeal(mealData, random = false) {
     });
 
     meal.addEventListener("click", () => {
-        // showMealInfo(mealData);
+        showMealInfo(mealData);
     });
 
     mealsEl.appendChild(meal);
@@ -144,26 +143,77 @@ function addMealFav(mealData) {
     });
 
     favMeal.addEventListener("click", () => {
-        // showMealInfo(mealData);
+        showMealInfo(mealData);
     });
 
     favoriteContainer.appendChild(favMeal);
 }
 
 searchBtn.addEventListener('click', async () => {
-  
-  mealsEl.innerHTML = '';
+
+    mealsEl.innerHTML = '';
     const search = searchTerm.value;
 
     const meals = await getMealsBySearch(search);
     // console.log(await getMealsBySearch(search));
 
-    if(meals) {
+    if (meals) {
         meals.forEach((meal) => {
             addMeal(meal);
         })
     }
 })
-// popupCloseBtn.addEventListener('click', ()=> {
-//     mealPopup.
-// })
+
+function showMealInfo(mealData) {
+   // clean it up
+   mealInfoEl.innerHTML = "";
+
+   // update the Meal info
+   const mealEl = document.createElement("div");
+
+   const ingredients = [];
+
+   // get ingredients and measures
+   for (let i = 1; i <= 20; i++) {
+       if (mealData["strIngredient" + i]) {
+           ingredients.push(
+               `${mealData["strIngredient" + i]} - ${
+                   mealData["strMeasure" + i]
+               }`
+           );
+       } else {
+           break;
+       }
+   }
+
+   mealEl.innerHTML = `
+       <h1>${mealData.strMeal}</h1>
+       <img
+           src="${mealData.strMealThumb}"
+           alt="${mealData.strMeal}"
+       />
+       <p>
+       ${mealData.strInstructions}
+       </p>
+       <h3>Ingredients:</h3>
+       <ul>
+           ${ingredients
+               .map(
+                   (ing) => `
+           <li>${ing}</li>
+           `
+               )
+               .join("")}
+       </ul>
+   `;
+
+   mealInfoEl.appendChild(mealEl);
+
+   // show the popup
+   mealPopup.classList.remove("hidden");
+}
+
+
+popupCloseBtn.addEventListener('click', () => {
+      mealPopup.classList.add("hidden");
+})
