@@ -1,8 +1,8 @@
 const mealsEl = document.getElementById("meals");
 const favoriteContainer = document.getElementById("fav-meals");
-// const mealPopup = document.getElementById("meal-popup");
-// const mealInfoEl = document.getElementById("meal-info");
-// const popupCloseBtn = document.getElementById("close-popup");
+const mealPopup = document.getElementById("meal-popup");
+const mealInfoEl = document.getElementById("meal-info");
+const popupCloseBtn = document.getElementById("close-popup");
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
 
@@ -150,4 +150,20 @@ function addMealFav(mealData) {
     favoriteContainer.appendChild(favMeal);
 }
 
-searchBtn.addEventListener
+searchBtn.addEventListener('click', async () => {
+  
+  mealsEl.innerHTML = '';
+    const search = searchTerm.value;
+
+    const meals = await getMealsBySearch(search);
+    // console.log(await getMealsBySearch(search));
+
+    if(meals) {
+        meals.forEach((meal) => {
+            addMeal(meal);
+        })
+    }
+})
+// popupCloseBtn.addEventListener('click', ()=> {
+//     mealPopup.
+// })
