@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  background-color: #A4EBF3;
+  padding: 1rem;
+}
+
+.notes {
+    background-color: aliceblue;
+    width: 400px;
+    height: 400px;
+}
+
+.notes .tools {
+    background-color: rgb(115, 214, 76);
+    padding: 0.5rem;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.notes .tools button {
+    background-color: transparent;
+    border: none;
+    color: tomato;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.notes .main {
+    height: 100%;
+    display: none;
+    width: 100%;
+}
+.notes textarea {
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+.notes .hidden {
+    display: none;
+}
