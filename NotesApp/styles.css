@@ -1,49 +1,133 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+body{
+    background-image:  linear-gradient(to right, #22c1c3, #fdbb2d);
+    font-family: "Ubuntu",sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header,form{
+    min-height: 20vh;
     display: flex;
-    flex-wrap: wrap;
-  background-color: #A4EBF3;
-  padding: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.notes {
-    background-color: aliceblue;
-    width: 400px;
-    height: 400px;
-}
-
-.notes .tools {
-    background-color: rgb(115, 214, 76);
+form input, form button {
     padding: 0.5rem;
-    justify-content: flex-end;
+    font-size: 1.5rem;
+    border: none;
+    background: whitesmoke;
+}
+form button {
+    background: whitesmoke;
+    color:tomato;
+    cursor: pointer;
+    transition: all 0.3s ease;    
+}
+form button:hover{
+    background :yellowgreen;
+    color: whitesmoke;
+}
+
+.todo-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: whitesmoke;
+    color: black;
+    font-size: 1.5rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li {
+    flex: 1;
 }
 
-.notes .tools button {
-    background-color: transparent;
+.complete-btn, .trash-btn{
+    background: rgb(233, 28, 28);
+    color: whitesmoke;
     border: none;
-    color: tomato;
+    padding: 1rem;
+    cursor: pointer;
     font-size: 1rem;
-    margin-left: 0.5rem;
 }
 
-.notes .main {
-    height: 100%;
-    display: none;
-    width: 100%;
+.complete-btn {
+    background: green;
 }
-.notes textarea {
-    border: none;
-    height: 100%;
-    width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: none;
+    border: none;
+
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.notes .hidden {
-    display: none;
+select {
+    color: indianred;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.75rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: indianred;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+    pointer-events: none;
+    transition: all 0.3s ease ;
+}
+.select:hover::after {
+    background: whitesmoke;
+    color: red;
 }
